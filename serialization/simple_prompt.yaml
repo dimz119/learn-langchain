@@ -1,0 +1,10 @@
+_type: prompt
+input_types: {}
+input_variables:
+- adjective
+- content
+output_parser: null
+partial_variables: {}
+template: Tell me a {adjective} joke about {content}.
+template_format: f-string
+validate_template: false
