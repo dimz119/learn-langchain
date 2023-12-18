@@ -16,8 +16,6 @@ prompt = ChatPromptTemplate.from_messages(
 
 memory = ConversationBufferMemory(return_messages=True)
 
-memory.load_memory_variables({})
-
 chain = (
     RunnablePassthrough.assign(
         history=RunnableLambda(memory.load_memory_variables) | itemgetter("history")
