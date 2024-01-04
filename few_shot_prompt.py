@@ -70,5 +70,7 @@ prompt = FewShotPromptTemplate(
 print(prompt.format(input="Who was the father of Mary Ball Washington?"))
 
 from langchain.llms import OpenAI
-llm = OpenAI()
+
+# Specify the model_name on 2024-01-03
+llm = OpenAI(model_name="text-davinci-003")
 print(llm.invoke(prompt.format(input="Who was the father of Mary Ball Washington?")))
