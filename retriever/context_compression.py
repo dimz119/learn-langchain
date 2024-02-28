@@ -7,7 +7,7 @@ from langchain.retrievers import ContextualCompressionRetriever
 from langchain_openai import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.retrievers.document_compressors import LLMChainExtractor
-from langchain_community.vectorstores import Chroma
+from langchain_community.vectorstores.chroma import Chroma
 
 data = TextLoader('./state_of_the_union.txt').load()
 

@@ -4,7 +4,7 @@
 from langchain_community.document_loaders import CSVLoader
 from langchain_openai import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
-from langchain_community.vectorstores import Chroma
+from langchain_community.vectorstores.chroma import Chroma
 
 # requires `pip install chromadb`
 loader = CSVLoader(file_path='./fortune_500_2020.csv')

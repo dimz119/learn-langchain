@@ -7,7 +7,7 @@ from langchain_openai import OpenAIEmbeddings
 from langchain.prompts import ChatPromptTemplate
 from langchain.schema.output_parser import StrOutputParser
 from langchain.schema.runnable import RunnableLambda, RunnablePassthrough
-from langchain_community.vectorstores import FAISS
+from langchain_community.vectorstores.faiss import FAISS
 
 # It requires `pip install langchain openai faiss-cpu tiktoken`
 embedding_model = OpenAIEmbeddings()
