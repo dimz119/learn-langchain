@@ -1,3 +1,6 @@
+# Note as of 02/27/2024
+# before you start you need to install the following
+# pip install langchain==0.1.9 langchain-openai==0.0.8 
 from langchain.prompts import PromptTemplate
 
 prompt = PromptTemplate.from_template("What is a good name for a company that makes {product}?")
@@ -24,7 +27,7 @@ print(chat_prompt_output)
 #   HumanMessage(content='I love programming.')]
 
 
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 
 chat_model = ChatOpenAI()
-print(chat_model(chat_prompt_output))
+print(chat_model.invoke(chat_prompt_output))

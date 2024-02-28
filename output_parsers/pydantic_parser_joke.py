@@ -1,11 +1,13 @@
+# Note as of 02/27/2024
+# before you start you need to install the following
+# pip install langchain==0.1.9 langchain-openai==0.0.8
 from typing import List
-
-from langchain.llms import OpenAI
+from langchain_openai import OpenAI
 from langchain.output_parsers import PydanticOutputParser
 from langchain.prompts import PromptTemplate
 from langchain.pydantic_v1 import BaseModel, Field, validator
 
-model_name = "text-davinci-003"
+model_name = "gpt-3.5-turbo-instruct"
 temperature = 0.0
 model = OpenAI(model_name=model_name, temperature=temperature)
 
@@ -49,7 +51,7 @@ prompt = PromptTemplate(
 
 _input = prompt.format_prompt(query=joke_query)
 
-output = model(_input.to_string())
+output = model.invoke(_input.to_string())
 print(output)
 output = '{"setup": "Why did the chicken cross the road?", "punchline": "To get to the other side!"}'
 """

@@ -1,5 +1,8 @@
+# Note as of 02/27/2024
+# before you start you need to install the following
+# pip install langchain==0.1.9 langchain-openai==0.0.8
 from langchain.memory import ConversationSummaryMemory, ChatMessageHistory
-from langchain.llms import OpenAI
+from langchain_openai import OpenAI
 
 memory = ConversationSummaryMemory(llm=OpenAI(temperature=0))
 memory.save_context({"input": "hi"}, {"output": "whats up"})

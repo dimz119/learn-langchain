@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from fastapi import FastAPI
 from langchain.prompts import ChatPromptTemplate
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langserve import add_routes
 
 

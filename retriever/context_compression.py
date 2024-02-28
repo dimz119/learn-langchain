@@ -1,10 +1,13 @@
-from langchain.document_loaders import TextLoader
-from langchain.llms import OpenAI
+# Note as of 02/27/2024
+# before you start you need to install the following
+# pip install langchain==0.1.9 langchain-openai==0.0.8
+from langchain_community.document_loaders import TextLoader
+from langchain_openai import OpenAI
 from langchain.retrievers import ContextualCompressionRetriever
-from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.retrievers.document_compressors import LLMChainExtractor
-from langchain.vectorstores import Chroma
+from langchain_community.vectorstores import Chroma
 
 data = TextLoader('./state_of_the_union.txt').load()
 

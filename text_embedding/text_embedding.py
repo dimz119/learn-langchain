@@ -1,4 +1,7 @@
-from langchain.embeddings import OpenAIEmbeddings
+# Note as of 02/27/2024
+# before you start you need to install the following
+# pip install langchain==0.1.9 langchain-openai==0.0.8
+from langchain_openai import OpenAIEmbeddings
 
 # requires `pip install openai`
 embeddings_model = OpenAIEmbeddings()
@@ -26,7 +29,7 @@ print(len(embeddings[1]))
 """
 
 # Use Document Loader
-from langchain.document_loaders.csv_loader import CSVLoader
+from langchain_community.document_loaders import CSVLoader
 loader = CSVLoader(file_path='./csv_sample.csv')
 data = loader.load()
 print(data)

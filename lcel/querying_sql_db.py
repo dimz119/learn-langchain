@@ -1,5 +1,8 @@
+# Note as of 02/27/2024
+# before you start you need to install the following
+# pip install langchain==0.1.9 langchain-openai==0.0.8
 from langchain.prompts import ChatPromptTemplate
-from langchain.utilities import SQLDatabase
+from langchain_community.utilities import SQLDatabase
 
 
 template = """Based on the table schema below, write a SQL query that would answer the user's question:
@@ -22,7 +25,7 @@ def get_schema(_):
 def run_query(query):
     return db.run(query)
 
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.schema import StrOutputParser
 from langchain.schema.runnable import RunnablePassthrough
 
