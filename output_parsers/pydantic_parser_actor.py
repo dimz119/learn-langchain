@@ -1,11 +1,13 @@
+# Note as of 02/27/2024
+# before you start you need to install the following
+# pip install langchain==0.1.9 langchain-openai==0.0.8
 from typing import List
-
-from langchain.llms import OpenAI
+from langchain_openai import OpenAI
 from langchain.output_parsers import PydanticOutputParser
 from langchain.prompts import PromptTemplate
 from langchain.pydantic_v1 import BaseModel, Field
 
-model_name = "text-davinci-003"
+model_name = "gpt-3.5-turbo-instruct"
 temperature = 0.0
 model = OpenAI(model_name=model_name, temperature=temperature)
 
@@ -39,10 +41,11 @@ prompt = PromptTemplate(
 
 _input = prompt.format_prompt(query=actor_query)
 
-output = model(_input.to_string())
+output = model.invoke(_input.to_string())
 """
 Output:
-{"name": "Tom Hanks", "film_names": ["Forrest Gump", "Saving Private Ryan", "The Green Mile", "Cast Away", "Toy Story"]}
+{"name": "Tom Hanks", "film_names": ["Forrest Gump", "Saving Private Ryan", "Cast Away", "The Green Mile", "Apollo 13", "Toy Story", "Toy Story 2", "Toy Story 3", "The Da Vinci Code", "Catch Me If You Can"]}
+name='Tom Hanks' film_names=['Forrest Gump', 'Saving Private Ryan', 'Cast Away', 'The Green Mile', 'Apollo 13', 'Toy Story', 'Toy Story 2', 'Toy Story 3', 'The Da Vinci Code', 'Catch Me If You Can']
 """
 m = parser.parse(output)
 print(m)

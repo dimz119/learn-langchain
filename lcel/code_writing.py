@@ -1,9 +1,12 @@
-from langchain.chat_models import ChatOpenAI
+# Note as of 02/27/2024
+# before you start you need to install the following
+# pip install langchain==0.1.9 langchain-openai==0.0.8
+from langchain_openai import ChatOpenAI
 from langchain.prompts import (
     ChatPromptTemplate,
 )
 from langchain.schema import StrOutputParser
-from langchain.utilities import PythonREPL
+from langchain_community.utilities import PythonREPL
 
 # Introduce PythonREPL
 python_repl = PythonREPL()

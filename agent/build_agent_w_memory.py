@@ -1,7 +1,10 @@
-from langchain.chat_models import ChatOpenAI
+# Note as of 02/27/2024
+# before you start you need to install the following
+# pip install langchain==0.1.9 langchain-openai==0.0.8
+from langchain_openai import ChatOpenAI
 from langchain.agents import tool
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain.tools.render import format_tool_to_openai_function
+from langchain_core.utils.function_calling import convert_to_openai_function
 
 @tool
 def get_word_length(word: str) -> int:
@@ -27,7 +30,7 @@ prompt = ChatPromptTemplate.from_messages(
 
 llm_with_tools = llm.bind(
                     functions=[
-                        format_tool_to_openai_function(t) for t in tools # type: ignore
+                        convert_to_openai_function(t) for t in tools # type: ignore
                     ]) 
 
 
@@ -70,9 +73,9 @@ chat_history.extend(
 print(agent_executor.invoke({"input": "is that a real word?", "chat_history": chat_history}))
 """
 {
-    'input': 'is that a real word?',
+    'input': 'is that a real word?', 
     'chat_history': [
         HumanMessage(content='how many letters in the word educa?'),
-        AIMessage(content='There are 5 letters in the word "educa".')], 
-    'output': 'No, "educa" is not a real word in English.'}
+        AIMessage(content='There are 5 letters in the word "educa".')],
+    'output': '"Educa" is not a common English word. It seems to be a shortened form of the word "education".'}
 """

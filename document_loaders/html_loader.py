@@ -1,4 +1,7 @@
-from langchain.document_loaders import UnstructuredHTMLLoader
+# Note as of 02/27/2024
+# before you start you need to install the following
+# pip install langchain==0.1.9 langchain-openai==0.0.8
+from langchain_community.document_loaders import UnstructuredHTMLLoader
 
 # requires `pip install unstructured`
 loader = UnstructuredHTMLLoader("sample.html")

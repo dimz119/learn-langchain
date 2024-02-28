@@ -1,6 +1,8 @@
+# Note as of 02/27/2024
+# before you start you need to install the following
+# pip install langchain==0.1.9 langchain-openai==0.0.8
 from operator import itemgetter
-
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.schema.runnable import RunnableLambda, RunnablePassthrough
@@ -28,7 +30,7 @@ inputs = {"input": "Hello, My name is Joon"}
 response = chain.invoke(inputs)
 print(response)
 """
-content='Hello Joon! How can I assist you today?'
+content="Hello Joon! It's nice to meet you. How can I assist you today?"
 """
 memory.save_context(inputs, {"output": response.content}) # type: ignore
 
@@ -41,5 +43,5 @@ inputs = {"input": "whats my name"}
 response = chain.invoke(inputs)
 print(response)
 """
-content='Your name is Joon.'
+content='Your name is Joon. How can I assist you further, Joon?
 """

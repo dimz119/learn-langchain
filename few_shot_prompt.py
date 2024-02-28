@@ -69,8 +69,11 @@ prompt = FewShotPromptTemplate(
 
 print(prompt.format(input="Who was the father of Mary Ball Washington?"))
 
-from langchain.llms import OpenAI
+from langchain_openai import OpenAI
 
-# Specify the model_name on 2024-01-03
-llm = OpenAI(model_name="text-davinci-003")
+# Specify the model_name on 2024-02-27
+# After model has been deprecated, the model does not answer any more.
+# OpenAI에서 기존에 되던 모델을 text-davinci-003를 없앤 후로 정확히 대답하지 않습니다. 
+# 어떤 식으로 랭체인을 사용하는지만 보셨으면 좋겠습니다.
+llm = OpenAI(model_name="davinci-002")
 print(llm.invoke(prompt.format(input="Who was the father of Mary Ball Washington?")))

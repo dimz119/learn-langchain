@@ -1,4 +1,7 @@
-from langchain.chat_models import ChatOpenAI
+# Note as of 02/27/2024
+# before you start you need to install the following
+# pip install langchain==0.1.9 langchain-openai==0.0.8
+from langchain_openai import ChatOpenAI
 
 llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
 
@@ -43,11 +46,11 @@ prompt = ChatPromptTemplate.from_messages(
 # In this case we’re relying on OpenAI function calling LLMs, 
 #   which take functions as a separate argument and 
 #   have been specifically trained to know when to invoke those functions.
-from langchain.tools.render import format_tool_to_openai_function
+from langchain_core.utils.function_calling import convert_to_openai_function
 
 llm_with_tools = llm.bind(
                     functions=[
-                        format_tool_to_openai_function(t) for t in tools # type: ignore
+                        convert_to_openai_function(t) for t in tools # type: ignore
                     ]) 
 
 

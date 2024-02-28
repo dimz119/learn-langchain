@@ -1,4 +1,7 @@
-from langchain.llms import OpenAI
+# Note as of 02/27/2024
+# before you start you need to install the following
+# pip install langchain==0.1.9 langchain-openai==0.0.8
+from langchain_openai import OpenAI
 from langchain.memory import ConversationEntityMemory
 
 llm = OpenAI(temperature=0)

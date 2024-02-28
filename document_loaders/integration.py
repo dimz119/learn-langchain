@@ -1,5 +1,8 @@
-from langchain.chat_models import ChatOpenAI
-from langchain.document_loaders.csv_loader import CSVLoader
+# Note as of 02/27/2024
+# before you start you need to install the following
+# pip install langchain==0.1.9 langchain-openai==0.0.8
+from langchain_openai import ChatOpenAI
+from langchain_community.document_loaders import CSVLoader
 from langchain.prompts.chat import ChatPromptTemplate
 
 template = "You are a helpful assistant that extract the {column} given the data `{data}`"
@@ -24,4 +27,4 @@ chat_prompt_output = chat_prompt.format_messages(
 print(chat_prompt_output)
 
 chat_model = ChatOpenAI()
-print(chat_model(chat_prompt_output))
+print(chat_model.invoke(chat_prompt_output))
