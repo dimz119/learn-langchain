@@ -6,7 +6,7 @@
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_openai import OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.vectorstores import Chroma
+from langchain_community.vectorstores.chroma import Chroma
 
 # Load blog post
 loader = WebBaseLoader("https://lilianweng.github.io/posts/2023-06-23-agent/")
