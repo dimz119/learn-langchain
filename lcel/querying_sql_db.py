@@ -2,7 +2,7 @@
 # before you start you need to install the following
 # pip install langchain==0.1.9 langchain-openai==0.0.8
 from langchain.prompts import ChatPromptTemplate
-from langchain_community.utilities import SQLDatabase
+from langchain_community.utilities.sql_database import SQLDatabase
 
 
 template = """Based on the table schema below, write a SQL query that would answer the user's question:
