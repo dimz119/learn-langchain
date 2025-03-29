@@ -1,0 +1,149 @@
+{
+    "messages": [
+        {
+            "type": "HumanMessage",
+            "content": "what's (3 + 5) x 12?",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "ee77cf94-5720-4090-ac63-29c10202b275"
+        },
+        {
+            "type": "AIMessage",
+            "content": "",
+            "additional_kwargs": {
+                "tool_calls": [
+                    {
+                        "id": "call_ANj2x44sYmCiLDikYBRzfwnf",
+                        "function": {
+                            "arguments": "{\"a\": 3, \"b\": 5}",
+                            "name": "add"
+                        },
+                        "type": "function"
+                    },
+                    {
+                        "id": "call_QbDXKPgWbIFMaDNl3H11uxGM",
+                        "function": {
+                            "arguments": "{\"a\": 8, \"b\": 12}",
+                            "name": "multiply"
+                        },
+                        "type": "function"
+                    }
+                ],
+                "refusal": null
+            },
+            "response_metadata": {
+                "token_usage": {
+                    "completion_tokens": 51,
+                    "prompt_tokens": 77,
+                    "total_tokens": 128,
+                    "completion_tokens_details": {
+                        "accepted_prediction_tokens": 0,
+                        "audio_tokens": 0,
+                        "reasoning_tokens": 0,
+                        "rejected_prediction_tokens": 0
+                    },
+                    "prompt_tokens_details": {
+                        "audio_tokens": 0,
+                        "cached_tokens": 0
+                    }
+                },
+                "model_name": "gpt-4o-2024-08-06",
+                "system_fingerprint": "fp_6dd05565ef",
+                "id": "chatcmpl-BGI6hIzVveFo1yl3bUbCxZOcTS0ly",
+                "finish_reason": "tool_calls",
+                "logprobs": null
+            },
+            "id": "run-4981eb3e-dc9d-48cf-8555-220b8d24f829-0",
+            "tool_calls": [
+                {
+                    "name": "add",
+                    "args": {
+                        "a": 3,
+                        "b": 5
+                    },
+                    "id": "call_ANj2x44sYmCiLDikYBRzfwnf",
+                    "type": "tool_call"
+                },
+                {
+                    "name": "multiply",
+                    "args": {
+                        "a": 8,
+                        "b": 12
+                    },
+                    "id": "call_QbDXKPgWbIFMaDNl3H11uxGM",
+                    "type": "tool_call"
+                }
+            ],
+            "usage_metadata": {
+                "input_tokens": 77,
+                "output_tokens": 51,
+                "total_tokens": 128,
+                "input_token_details": {
+                    "audio": 0,
+                    "cache_read": 0
+                },
+                "output_token_details": {
+                    "audio": 0,
+                    "reasoning": 0
+                }
+            }
+        },
+        {
+            "type": "ToolMessage",
+            "content": "8",
+            "name": "add",
+            "id": "3fed1876-1c6a-47ef-95ea-651e33e47f39",
+            "tool_call_id": "call_ANj2x44sYmCiLDikYBRzfwnf"
+        },
+        {
+            "type": "ToolMessage",
+            "content": "96",
+            "name": "multiply",
+            "id": "21102f77-fddd-4a2c-a885-de9b9ec8269a",
+            "tool_call_id": "call_QbDXKPgWbIFMaDNl3H11uxGM"
+        },
+        {
+            "type": "AIMessage",
+            "content": "The result of \\((3 + 5) \\times 12\\) is 96.",
+            "additional_kwargs": {
+                "refusal": null
+            },
+            "response_metadata": {
+                "token_usage": {
+                    "completion_tokens": 22,
+                    "prompt_tokens": 143,
+                    "total_tokens": 165,
+                    "completion_tokens_details": {
+                        "accepted_prediction_tokens": 0,
+                        "audio_tokens": 0,
+                        "reasoning_tokens": 0,
+                        "rejected_prediction_tokens": 0
+                    },
+                    "prompt_tokens_details": {
+                        "audio_tokens": 0,
+                        "cached_tokens": 0
+                    }
+                },
+                "model_name": "gpt-4o-2024-08-06",
+                "system_fingerprint": "fp_6dd05565ef",
+                "id": "chatcmpl-BGI6hmjJs0RLcha8AO4sUT1bEZgo4",
+                "finish_reason": "stop",
+                "logprobs": null
+            },
+            "id": "run-4d093615-ecd4-4918-bbe6-533ec590ccca-0",
+            "usage_metadata": {
+                "input_tokens": 143,
+                "output_tokens": 22,
+                "total_tokens": 165,
+                "input_token_details": {
+                    "audio": 0,
+                    "cache_read": 0
+                },
+                "output_token_details": {
+                    "audio": 0,
+                    "reasoning": 0
+                }
+            }
+        }
+    ]
+}

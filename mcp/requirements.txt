@@ -1,0 +1,10 @@
+mcp
+httpx
+langchain
+langchain-core
+langchain-community
+langchain-groq
+langchain-ollama
+langchain_mcp_adapters
+langchain_openai
+langgraph
