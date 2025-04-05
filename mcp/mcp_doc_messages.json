@@ -1,0 +1,132 @@
+{
+    "messages": [
+        {
+            "type": "HumanMessage",
+            "content": "how does langchain chatbot works? check the latest documenation. but make it short as 5 lines",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "f5f461cc-05a7-402e-9b81-3d6919930627"
+        },
+        {
+            "type": "AIMessage",
+            "content": "",
+            "additional_kwargs": {
+                "tool_calls": [
+                    {
+                        "id": "call_Yy1lavSk3GyKWka30ETksAkw",
+                        "function": {
+                            "arguments": "{}",
+                            "name": "list_doc_sources"
+                        },
+                        "type": "function"
+                    }
+                ],
+                "refusal": null
+            },
+            "response_metadata": {
+                "token_usage": {
+                    "completion_tokens": 12,
+                    "prompt_tokens": 232,
+                    "total_tokens": 244
+                },
+                "model_name": "gpt-4o-mini-2024-07-18",
+                "finish_reason": "tool_calls"
+            },
+            "id": "run-cb28ae21-5ae4-4c71-9fa1-cc08f9b2dbdd-0"
+        },
+        {
+            "type": "ToolMessage",
+            "content": "LangChain\nURL: https://python.langchain.com/llms.txt\n\n",
+            "name": "list_doc_sources",
+            "id": "7405d543-3795-4ed7-b774-318b555ddf38",
+            "tool_call_id": "call_Yy1lavSk3GyKWka30ETksAkw"
+        },
+        {
+            "type": "AIMessage",
+            "content": "",
+            "additional_kwargs": {
+                "tool_calls": [
+                    {
+                        "id": "call_csnsmJMuK3KyMs61ZUiikbTH",
+                        "function": {
+                            "arguments": "{\"url\":\"https://python.langchain.com/llms.txt\"}",
+                            "name": "fetch_docs"
+                        },
+                        "type": "function"
+                    }
+                ],
+                "refusal": null
+            },
+            "response_metadata": {
+                "token_usage": {
+                    "completion_tokens": 24,
+                    "prompt_tokens": 268,
+                    "total_tokens": 292
+                },
+                "model_name": "gpt-4o-mini-2024-07-18",
+                "finish_reason": "tool_calls"
+            },
+            "id": "run-97326a71-27b6-44f3-8173-8bb8b8fd903a-0"
+        },
+        {
+            "type": "ToolMessage",
+            "content": "# LangChain\n## High level\n[Why LangChain?](https://python.langchain.com/docs/concepts/why_langchain/): considering using LangChain, when building complex AI applications, and when needing to evaluate AI applications This page discusses the main reasons to use LangChain: standardized component interfaces, orchestration capabilities, and observability/evaluation through L...tool calling, and structured outputs. The architecture supports multimodal data, allowing text, images, and other formats in interactions. Additionally, the framework includes memory management for maintaining conversation context. By leveraging these components, developers can create dynamic and interactive chatbot applications effectively.",
+            "additional_kwargs": {
+                "refusal": null
+            },
+            "response_metadata": {
+                "token_usage": {
+                    "completion_tokens": 83,
+                    "prompt_tokens": 26007,
+                    "total_tokens": 26090
+                },
+                "model_name": "gpt-4o-mini-2024-07-18",
+                "finish_reason": "stop"
+            },
+            "id": "run-3801de5d-bf5c-42c6-9152-4aec779badda-0"
+        },
+        {
+            "type": "AIMessage",
+            "content": "LangChain chatbot operates by utilizing chat models that facilitate conversation through structured messaging. It integrates various components such as tools for functionality and memory for context management. The framework supports advanced techniques like tool calling for external functions, structured outputs for formatted responses, and multimodal inputs compatible with text and media. Additionally, it effectively manages chat history to retain context for better interaction. By connecting these elements, LangChain enables the creation of responsive and context-aware conversational agents.",
+            "additional_kwargs": {
+                "refusal": null
+            },
+            "response_metadata": {
+                "token_usage": {
+                    "completion_tokens": 92,
+                    "prompt_tokens": 26007,
+                    "total_tokens": 26099,
+                    "completion_tokens_details": {
+                        "accepted_prediction_tokens": 0,
+                        "audio_tokens": 0,
+                        "reasoning_tokens": 0,
+                        "rejected_prediction_tokens": 0
+                    },
+                    "prompt_tokens_details": {
+                        "audio_tokens": 0,
+                        "cached_tokens": 0
+                    }
+                },
+                "model_name": "gpt-4o-mini-2024-07-18",
+                "system_fingerprint": "fp_b376dfbbd5",
+                "id": "chatcmpl-BIUYRlwT3cKoOREZxe2d6IIk1YWp5",
+                "finish_reason": "stop",
+                "logprobs": null
+            },
+            "id": "run-9f71886f-18a7-4f13-ac5c-18dfdbc920fd-0",
+            "usage_metadata": {
+                "input_tokens": 26007,
+                "output_tokens": 92,
+                "total_tokens": 26099,
+                "input_token_details": {
+                    "audio": 0,
+                    "cache_read": 0
+                },
+                "output_token_details": {
+                    "audio": 0,
+                    "reasoning": 0
+                }
+            }
+        }
+    ]
+}
