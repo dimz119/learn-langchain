@@ -1,0 +1,180 @@
+{
+    "StateSnapshot": {
+        "values": {
+            "messages": [
+                {
+                    "type": "HumanMessage",
+                    "content": "Hi there! My name is Will.",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "id": "028b7fa2-ad08-46bb-9caf-ee914c7a3a9f"
+                },
+                {
+                    "type": "AIMessage",
+                    "content": "Hello, Will! How can I assist you today?",
+                    "additional_kwargs": {
+                        "refusal": null
+                    },
+                    "response_metadata": {
+                        "token_usage": {
+                            "completion_tokens": 13,
+                            "prompt_tokens": 87,
+                            "total_tokens": 100,
+                            "completion_tokens_details": {
+                                "accepted_prediction_tokens": 0,
+                                "audio_tokens": 0,
+                                "reasoning_tokens": 0,
+                                "rejected_prediction_tokens": 0
+                            },
+                            "prompt_tokens_details": {
+                                "audio_tokens": 0,
+                                "cached_tokens": 0
+                            }
+                        },
+                        "model_name": "gpt-4o-2024-08-06",
+                        "system_fingerprint": "fp_898ac29719",
+                        "id": "chatcmpl-BJ1lT1eOs5OiL2HRWuMOSSK11bhgG",
+                        "finish_reason": "stop",
+                        "logprobs": null
+                    },
+                    "id": "run-26ad0d58-875f-49fb-97f9-24a5912b7f90-0",
+                    "usage_metadata": {
+                        "input_tokens": 87,
+                        "output_tokens": 13,
+                        "total_tokens": 100,
+                        "input_token_details": {
+                            "audio": 0,
+                            "cache_read": 0
+                        },
+                        "output_token_details": {
+                            "audio": 0,
+                            "reasoning": 0
+                        }
+                    }
+                },
+                {
+                    "type": "HumanMessage",
+                    "content": "Remember my name?",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "id": "ef57b445-5073-46c3-a2af-0da2c5537455"
+                },
+                {
+                    "type": "AIMessage",
+                    "content": "Yes, your name is Will! How can I help you today?",
+                    "additional_kwargs": {
+                        "refusal": null
+                    },
+                    "response_metadata": {
+                        "token_usage": {
+                            "completion_tokens": 16,
+                            "prompt_tokens": 110,
+                            "total_tokens": 126,
+                            "completion_tokens_details": {
+                                "accepted_prediction_tokens": 0,
+                                "audio_tokens": 0,
+                                "reasoning_tokens": 0,
+                                "rejected_prediction_tokens": 0
+                            },
+                            "prompt_tokens_details": {
+                                "audio_tokens": 0,
+                                "cached_tokens": 0
+                            }
+                        },
+                        "model_name": "gpt-4o-2024-08-06",
+                        "system_fingerprint": "fp_898ac29719",
+                        "id": "chatcmpl-BJ1lUqUbb9SKZYgCSZxQOiahvQxhe",
+                        "finish_reason": "stop",
+                        "logprobs": null
+                    },
+                    "id": "run-67c6298d-3028-45a2-be32-6df01f1d5340-0",
+                    "usage_metadata": {
+                        "input_tokens": 110,
+                        "output_tokens": 16,
+                        "total_tokens": 126,
+                        "input_token_details": {
+                            "audio": 0,
+                            "cache_read": 0
+                        },
+                        "output_token_details": {
+                            "audio": 0,
+                            "reasoning": 0
+                        }
+                    }
+                }
+            ]
+        },
+        "next": [],
+        "config": {
+            "configurable": {
+                "thread_id": "1",
+                "checkpoint_ns": "",
+                "checkpoint_id": "1f01244c-db8f-6dce-8004-964cf12634f9"
+            }
+        },
+        "metadata": {
+            "source": "loop",
+            "writes": {
+                "chatbot": {
+                    "messages": [
+                        {
+                            "type": "AIMessage",
+                            "content": "Yes, your name is Will! How can I help you today?",
+                            "additional_kwargs": {
+                                "refusal": null
+                            },
+                            "response_metadata": {
+                                "token_usage": {
+                                    "completion_tokens": 16,
+                                    "prompt_tokens": 110,
+                                    "total_tokens": 126,
+                                    "completion_tokens_details": {
+                                        "accepted_prediction_tokens": 0,
+                                        "audio_tokens": 0,
+                                        "reasoning_tokens": 0,
+                                        "rejected_prediction_tokens": 0
+                                    },
+                                    "prompt_tokens_details": {
+                                        "audio_tokens": 0,
+                                        "cached_tokens": 0
+                                    }
+                                },
+                                "model_name": "gpt-4o-2024-08-06",
+                                "system_fingerprint": "fp_898ac29719",
+                                "id": "chatcmpl-BJ1lUqUbb9SKZYgCSZxQOiahvQxhe",
+                                "finish_reason": "stop",
+                                "logprobs": null
+                            },
+                            "id": "run-67c6298d-3028-45a2-be32-6df01f1d5340-0",
+                            "usage_metadata": {
+                                "input_tokens": 110,
+                                "output_tokens": 16,
+                                "total_tokens": 126,
+                                "input_token_details": {
+                                    "audio": 0,
+                                    "cache_read": 0
+                                },
+                                "output_token_details": {
+                                    "audio": 0,
+                                    "reasoning": 0
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "step": 4,
+            "parents": {},
+            "thread_id": "1"
+        },
+        "created_at": "2025-04-05T17:38:36.701414+00:00",
+        "parent_config": {
+            "configurable": {
+                "thread_id": "1",
+                "checkpoint_ns": "",
+                "checkpoint_id": "1f01244c-d550-6de6-8003-fd3b2449d796"
+            }
+        },
+        "tasks": []
+    }
+}
