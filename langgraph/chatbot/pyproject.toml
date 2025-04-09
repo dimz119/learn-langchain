@@ -1,0 +1,14 @@
+[project]
+name = "chatbot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "langchain-anthropic>=0.3.10",
+    "langchain-community>=0.3.21",
+    "langchain-openai>=0.3.12",
+    "langgraph>=0.3.25",
+    "langsmith>=0.3.24",
+    "tavily-python>=0.5.4",
+]
