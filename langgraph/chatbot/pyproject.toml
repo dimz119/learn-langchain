@@ -9,6 +9,7 @@ dependencies = [
     "langchain-community>=0.3.21",
     "langchain-openai>=0.3.12",
     "langgraph>=0.3.25",
+    "langgraph-checkpoint-sqlite>=2.0.6",
     "langsmith>=0.3.24",
     "tavily-python>=0.5.4",
 ]
